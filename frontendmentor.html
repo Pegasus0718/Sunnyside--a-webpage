@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Sunnyside agency landing page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <!-- Nav -->
+      <nav class="nav">
+        <a href="#"><img src="logo.svg" class="nav-logo" alt="brand logo"
+        /></a>
+        <ul class="nav-links">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="burger" tabindex="0">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </nav>
+      <!-- H1 -->
+      <div class="wrap-cta">
+        <h1>We are creatives</h1>
+        <div class="arrow-container">
+          <a href="#main">
+            <img
+              src="icon-arrow-down.svg"
+              class="arrow-down"
+              alt="arrow down"
+          /></a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main -->
+
+    <main class="main" id="main">
+      <!-- 6 stack of grid items -->
+
+      <div class="first-main-grid">
+        <section>
+          <div class="wrapper">
+            <h2>Transform your brand</h2>
+            <p>
+              We are a full-service creative agency specializing in helping
+              brands grow fast. Engage your clients through compelling visuals
+              that do most of the marketing for you.
+            </p>
+            <a href="#">Learn more</a>
+          </div>
+        </section>
+        <div><img src="image-transform.jpg" alt="" /></div>
+        <div><img src="image-stand-out.jpg" alt="" /></div>
+        <section>
+          <div class="wrapper">
+            <h2>Stand out to the right audience</h2>
+            <p>
+              Using a collaborative formula of designers, researchers,
+              photographers, videographers, and copywriters, we’ll build and
+              extend your brand in digital places.
+            </p>
+            <a href="#">Learn more</a>
+          </div>
+        </section>
+        <section>
+          <img src="image-graphic-design.jpg" alt="" />
+          <div>
+            <h3>Graphic design</h3>
+            <p>
+              Great design makes you memorable. We deliver artwork that
+              underscores your brand message and captures potential clients’
+              attention.
+            </p>
+          </div>
+        </section>
+        <section>
+          <img src="image-photography.jpg" alt="" />
+          <div>
+            <h3>Photography</h3>
+            <p>
+              Increase your credibility by getting the most stunning,
+              high-quality photos that improve your business image.
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <!-- Testimonial Grid -->
+
+      <section class="testimonial">
+        <h3>Client testimonials</h3>
+        <div class="testimonial-authors">
+          <div>
+            <img src="image-emily.jpg" alt="a person's photo" />
+            <p>
+              We put our trust in Sunnyside and they delivered, making sure our
+              needs were met and deadlines were always hit.
+            </p>
+            <div class="author-info">
+              <span>Emily R.</span><span>Marketing Director</span>
+            </div>
+          </div>
+          <div>
+            <img src="image-thomas.jpg" alt="a person's photo" />
+            <p>
+              Sunnyside’s enthusiasm coupled with their keen interest in our
+              brand’s success made it a satisfying and enjoyable experience.
+            </p>
+            <div class="author-info">
+              <span>Thomas S.</span><span>Chief Operating Officer</span>
+            </div>
+          </div>
+          <div>
+            <img src="image-jennie.jpg" alt="a person's photo" />
+            <p>
+              Incredible end result! Our sales increased over 400% when we
+              worked with Sunnyside. Highly recommended!
+            </p>
+            <div class="author-info">
+              <span>Jennie F.</span><span>Business Owner</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="image-gallery">
+        <img src="image-gallery-milkbottles.jpg" alt="" />
+        <img src="image-gallery-orange.jpg" alt="" />
+        <img src="image-gallery-cone.jpg" alt="" />
+        <img src="image-gallery-sugarcubes.jpg" alt="" />
+      </div>
+    </main>
+
+    <!-- Footer  -->
+    <footer class="footer">
+      <img src="logo.svg" class="footer-logo" alt="brand logo" />
+      <ul class="footer-links">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Projects</a></li>
+      </ul>
+      <ul class="footer-socials">
+        <li>
+          <a href="#"
+            ><img src="icon-facebook.svg" alt="facebook logo"
+          /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img src="icon-instagram.svg" alt="instagram logo"
+          /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img src="icon-twitter.svg" alt="twitter logo"
+          /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img src="icon-pinterest.svg" alt="pinterest logo"
+          /></a>
+        </li>
+      </ul>
+    </footer>
+
+    <script>
+      const burger = document.querySelector(".burger");
+      const navlinks = document.querySelector(".nav-links");
+      let burgerLines = burger.children;
+
+      burger.addEventListener("click", (e) => {
+        navlinks.classList.toggle("show");
+
+        for (line of burgerLines) {
+          line.classList.toggle("active");
+        }
+      });
+
+      burger.addEventListener("keyup", (e) => {
+        if (e.keyCode === 13) {
+          navlinks.classList.toggle("show");
+          for (line of burgerLines) {
+            line.classList.toggle("active");
+          }
+        }
+      });
+    </script>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
